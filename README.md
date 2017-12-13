@@ -1,5 +1,5 @@
 # 付费验证SDK开发者文档
-### 流程示例请参看截图：![avatar](https://github.com/boriszixue/paysdkdoc/edit/master/demo.png)
+### 流程示例请参看截图：![点我看SDK验证流程的UI](https://github.com/boriszixue/paysdkdoc/edit/master/demo.png)
 ------
 
 ### SDK实现说明
@@ -11,6 +11,7 @@
 > * 打开APP从未通过验证的，**不属于**“可以玩”
 > * 已通过验证后，后续打开未通过验证，但是在`限制时间`内，属于“可以玩”
 > * 流程开始的时机点是：``CheckFragment`` 的 onResume()方法
+------
 
 ### API使用：
 1. 依赖，sdk以aar文件存在，在libs目录添加 m4399-paysdk-1.0.aar文件， 在moudle下的build.gradle添加如下：
@@ -30,6 +31,7 @@ M4399GameBoxClient.getInstance().init(limitTime, gameID, listener);
 > * ``onPassInLimitTime(Activity hostActivity)`` 验证流程未通过，但是在限制之间内，会触发该方法，hostActivity是宿主Activity。
 > * ``onVerifyPass(Activity hostActivity)`` 验证流程通过，会触发该方法。
 > * 这两个方法的通用实现：进入游戏并关闭宿主Activity。
+------
 
 ### 使用说明及注意点：
 
