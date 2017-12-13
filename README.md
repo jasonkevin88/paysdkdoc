@@ -1,5 +1,5 @@
 # 付费验证SDK开发者文档
-### 流程示例请参看截图：![点我看SDK验证流程的UI](https://github.com/boriszixue/paysdkdoc/edit/master/demo.png)
+### 流程示例请参看截图：![点我看SDK验证流程的效果图](https://github.com/boriszixue/paysdkdoc/edit/master/demo.png)
 ------
 
 ### SDK实现说明
