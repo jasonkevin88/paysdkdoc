@@ -24,9 +24,9 @@
 ```java
 M4399GameBoxClient.getInstance().init(limitTime, gameID, listener);
 ```
-##### `limitTime` 代表限制时间，单位毫秒，比如一天：``DateUtils.DAY_IN_MILLIS ``
-##### `gameID` 代表在4399平台上的游戏id
-##### `listener` 应继承自``M4399GameBoxClient.DefaultVerifyListener``
+> *  `limitTime` 代表限制时间，单位毫秒，比如一天：``DateUtils.DAY_IN_MILLIS ``
+> *  `gameID` 代表在4399平台上的游戏id
+> *  `listener` 应继承自``M4399GameBoxClient.DefaultVerifyListener``
 3. ``DefaultVerifyListener``类的两个抽象方法说明：
 > * ``onPassInLimitTime(Activity hostActivity)`` 验证流程未通过，但是在限制之间内，会触发该方法，hostActivity是宿主Activity。
 > * ``onVerifyPass(Activity hostActivity)`` 验证流程通过，会触发该方法。
