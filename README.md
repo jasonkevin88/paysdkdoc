@@ -57,4 +57,4 @@ M4399GameBoxClient.getInstance().init(limitTime, gameID, listener);
     transaction.add(R.id.container, fragment);
     transaction.commit();
 ```
-> * 验证流程的视图区域是宿主Activity页面中的一块区域，为了提升宿主页面的UI 体验，不要保持页面其他区域空白，请让UI设计，给页面加点其他内容，比如文字提示，或者页面设置背景图，或者引用闪屏页的4399Logo等等，
+> * **验证流程的视图区域是宿主Activity页面中的一块区域，为了提升宿主页面的UI 体验，不要保持页面其他区域空白，请让UI设计，给页面加点其他内容，比如文字提示，或者页面设置背景图，或者引用闪屏页的4399Logo等等。**
