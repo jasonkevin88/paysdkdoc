@@ -22,7 +22,7 @@
 1. 依赖，sdk以aar文件存在，在libs目录添加 m4399-paysdk-1.0.aar文件， 在moudle下的build.gradle添加如下：
 ```gradle
     dependencies {
-        compile(name: 'm4399-paysdk-1.0', ext: 'aar')
+        compile(name: 'm4399-paysdk-1.0.1', ext: 'aar')
     }
 ```
 2. 在 `CheckFragment`被展示之前（**建议**在**Application**的**onCreate()**）调用SDK初始化配置：
