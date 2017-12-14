@@ -42,7 +42,7 @@ M4399GameBoxClient.getInstance().init(limitTime, gameID, listener);
 
 > * 流程的UI是以Fragment封装起来，所以接入的APP需要提供Activity（在此称为：宿主Activity）来显示Fragment。
 > * 建议宿主Activity固定横屏或竖屏，以免Activity生命周期重建对Fragment的影响，比如：触发多次网络请求，若不配置，请自行处理影响。
-> * 第3个流程中，sdk通过调用游戏盒页面（透明页）向服务器查询，为了提升视觉体验及UI无感知（即用户无感知此流程中游戏盒被调用），**宿主Activity** 建议设置成全屏。代码调用如下:
+> * 在验证流程第三步中，sdk通过调用游戏盒页面（透明页）向服务器查询，为了提升视觉体验及UI无感知（即用户无感知此流程中游戏盒被调用），**宿主Activity** 建议设置成全屏。代码调用如下:
 ```java
     @Override
     protected void onCreate(Bundle savedInstanceState)
