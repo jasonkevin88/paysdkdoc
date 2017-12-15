@@ -3,7 +3,7 @@
 ------
 
 ### 开发前需知：
-#### **在接入时，我们会提供给你们 测试用的gameID和 游戏盒测试账号密码，方便你们开发阶段的测试。`务必测试`：能进入到可以玩游戏的界面，才能表明你已正确接入该SDK。在接入完成，测试没问题之后，你需要替换上游戏在4399平台上的真实gameID。**
+#### **在接入时，我们会提供给你 测试用的 packageName和 游戏盒测试账号密码，方便你们开发阶段的测试。`务必测试`：能进入到可以玩游戏的界面，才能表明你已正确接入该SDK。**
 > * **备注：测试账号仅用于方便测试，请勿对游戏盒测试账号更改资料、密码，发布无意义的、敏感的评论动态等其他操作，请遵守！！！**
 ------
 
@@ -19,19 +19,19 @@
 ------
 
 ### API使用：
-1. 依赖，sdk以aar文件存在，在libs目录添加 m4399-paysdk-1.0.aar文件， 在moudle下的build.gradle添加如下：
+1. 依赖，sdk以aar文件存在，在libs目录添加 m4399-paysdk-1.0.2.aar文件， 在moudle下的build.gradle添加如下：
 ```gradle
     dependencies {
-        compile(name: 'm4399-paysdk-1.0.1', ext: 'aar')
+        compile(name: 'm4399-paysdk-1.0.2', ext: 'aar')
     }
 ```
 2. 在 `CheckFragment`被展示之前（**建议**在**Application**的**onCreate()**）调用SDK初始化配置：
 ```java
-M4399GameBoxClient.getInstance().init(limitTime, gameID, listener);
+M4399GameBoxClient.getInstance().init(limitTime, packageName, listener);
 ```
 > *  `limitTime` 代表限制时间，单位毫秒，比如一天：``DateUtils.DAY_IN_MILLIS ``
-> *  `gameID` 代表在4399平台上的游戏id
-> *  `listener` 应继承自``M4399GameBoxClient.DefaultVerifyListener``
+> *  `packageName` 代表游戏的包名，在开发测试时，请填上我们提供的测试的包名，发布时，使用真实的包名
+> *  `listener` 应继承自``M4399GameBoxClient.DefaultVerifyListener``
 3. ``DefaultVerifyListener``类的两个抽象方法说明：
 > * ``onPassInLimitTime(Activity hostActivity)`` 验证流程未通过，但是在限制之间内，会触发该方法，hostActivity是宿主Activity。
 > * ``onVerifyPass(Activity hostActivity)`` 验证流程通过，会触发该方法。
