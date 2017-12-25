@@ -41,7 +41,7 @@ M4399GameBoxClient.getInstance().init(packageName, listener);//默认限制时�
 > * ``onVerifyPass(Activity hostActivity)`` 验证流程通过，会触发该方法。
 > * 这两个方法的通用实现：进入游戏并关闭流程页面Activity。
 
-4. 打开流程页面（一般是在闪屏页面关闭后）
+3. 打开流程页面（一般是在闪屏页面关闭后）
 ```java 
     M4399GameBoxClient.getInstance().openCheckFlowPage(this);
 ``` 
