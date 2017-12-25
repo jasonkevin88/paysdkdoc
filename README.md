@@ -37,8 +37,8 @@ M4399GameBoxClient.getInstance().init(packageName, listener);//默认限制时�
 > *  `packageName` 代表游戏的包名，在开发测试时，请填上我们提供的测试的包名，发布时，使用真实的包名
 > *  `listener` 应继承自``M4399GameBoxClient.DefaultVerifyListener``
   ``DefaultVerifyListener``类的两个抽象方法说明：
-  1. ``onPassInLimitTime(Activity hostActivity)`` 验证流程未通过，但是在限制之间内，会触发该方法，hostActivity是流程页面Activity。
-  2. ``onVerifyPass(Activity hostActivity)`` 验证流程通过，会触发该方法。
+  ``onPassInLimitTime(Activity hostActivity)`` 验证流程未通过，但是在限制之间内，会触发该方法，hostActivity是流程页面Activity。
+  ``onVerifyPass(Activity hostActivity)`` 验证流程通过，会触发该方法。
 > * 这两个方法的通用实现：进入游戏并关闭流程页面Activity。
 
 3. 打开流程页面（一般是在闪屏页面关闭后）
